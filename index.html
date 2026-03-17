@@ -1,227 +1,268 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>  
+<html lang="de">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  
+<title>Delicious Burger Düsseldorf – Halal Burger & Wraps</title>  
+<meta name="description" content="Halal Burger, Wraps & mehr in Düsseldorf. Frisch, lecker und kinderfreundlich. Jetzt anrufen!">  
+  
+<meta name="keywords" content="Burger Düsseldorf, Halal Burger Düsseldorf, Wraps Düsseldorf, Essen Düsseldorf, Delicious Burger NRW">  
+  
+<script type="application/ld+json">  
+{  
+  "@context": "https://schema.org",  
+  "@type": "Restaurant",  
+  "name": "Delicious Burger Düsseldorf",  
+  "image": "https://deliciousburger-nrw.de/logo.png",  
+  "address": {  
+    "@type": "PostalAddress",  
+    "streetAddress": "Ronsdorfer Straße 120",  
+    "addressLocality": "Düsseldorf",  
+    "postalCode": "40233",  
+    "addressCountry": "DE"  
+  },  
+  "telephone": "+4921136180900",  
+  "servesCuisine": "Burger, Halal",  
+  "priceRange": "€",  
+  "url": "https://deliciousburger-nrw.de"  
+}  
+</script>  
+  
+<style>  
+body {  
+  margin: 0;  
+  font-family: Arial;  
+  background: #000;  
+  color: white;  
+  padding-bottom: 100px;  
+}  
+  
+header {  
+  text-align: center;  
+  padding: 20px;  
+}  
+  
+.logo {  
+  width: 110px;  
+}  
+  
+h1, h2 {  
+  color: gold;  
+}  
+  
+.section {  
+  padding: 20px;  
+}  
+  
+.slider {  
+  position: relative;  
+  height: 250px;  
+  overflow: hidden;  
+  border-radius: 20px;  
+}  
+  
+.slide {  
+  position: absolute;  
+  width: 100%;  
+  height: 100%;  
+  opacity: 0;  
+  transition: 1s;  
+}  
+  
+.slide.active {  
+  opacity: 1;  
+}  
+  
+.slide img, .slide video {  
+  width: 100%;  
+  height: 100%;  
+  object-fit: cover;  
+}  
+  
+.arrow {  
+  position: absolute;  
+  top: 50%;  
+  transform: translateY(-50%);  
+  font-size: 30px;  
+  background: rgba(0,0,0,0.5);  
+  color: white;  
+  padding: 10px;  
+  cursor: pointer;  
+  z-index: 2;  
+}  
+  
+.arrow.left { left: 10px; }  
+.arrow.right { right: 10px; }  
+  
+.menu-header {  
+  display: grid;  
+  grid-template-columns: 1fr 80px 80px;  
+  border-bottom: 2px solid gold;  
+  padding: 10px 0;  
+  font-weight: bold;  
+}  
+  
+.menu-item {  
+  display: grid;  
+  grid-template-columns: 1fr 80px 80px;  
+  padding: 10px 0;  
+  border-bottom: 1px solid #333;  
+}  
+  
+.category {  
+  margin-top: 25px;  
+  font-size: 20px;  
+  color: gold;  
+}  
+  
+.rating {  
+  background: #111;  
+  padding: 15px;  
+  border-radius: 15px;  
+  margin-top: 20px;  
+  text-align: center;  
+}  
+  
+.rating a {  
+  color: gold;  
+  text-decoration: none;  
+}  
 
-<title>Delicious Burger Düsseldorf – Halal Burger & Wraps</title>
-
-<meta name="description" content="Halal Burger, Wraps & mehr in Düsseldorf. Frisch, lecker und kinderfreundlich. Jetzt anrufen!">
-<meta name="keywords" content="Burger Düsseldorf, Halal Burger Düsseldorf, Wraps Düsseldorf">
-
-<style>
-body {margin:0;font-family:Arial;background:#000;color:white;padding-bottom:100px;}
-
-header {text-align:center;padding:20px;}
-
-.logo {width:110px;}
-
-h1,h2 {color:gold;}
-
-.section {padding:20px;}
-
-/* NAVBAR */
-.nav {
-  position: sticky;
-  top: 0;
-  background: #000;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid #333;
-  z-index: 1000;
-}
-
-.nav a {
-  color: gold;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-/* SLIDER */
-.slider {position:relative;height:250px;overflow:hidden;border-radius:20px;}
-
-.slide {position:absolute;width:100%;height:100%;opacity:0;transition:1s;}
-.slide.active {opacity:1;}
-
-.slide img, .slide video {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* MENU */
-.menu-header {
-  display:grid;
-  grid-template-columns:1fr 80px 80px;
-  border-bottom:2px solid gold;
-  padding:10px 0;
+/* 🔥 NEU: SOCIAL BUTTONS */
+.social-buttons a {
+  display:block;
+  margin:10px 0;
+  padding:12px;
+  border-radius:10px;
+  text-align:center;
+  text-decoration:none;
   font-weight:bold;
 }
 
-.menu-item {
-  display:grid;
-  grid-template-columns:1fr 80px 80px;
-  padding:10px 0;
-  border-bottom:1px solid #333;
+.instagram {
+  background:#E1306C;
+  color:white;
 }
 
-.category {margin-top:25px;font-size:20px;color:gold;}
-
-/* BUTTON */
-.call-btn {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:gold;
+.tiktok {
+  background:#25F4EE;
   color:black;
-  font-size:26px;
-  width:65px;
-  height:65px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
 }
+  
+.call-btn {  
+  position: fixed;  
+  bottom: 20px;  
+  right: 20px;  
+  background: gold;  
+  color: black;  
+  font-size: 26px;  
+  width: 65px;  
+  height: 65px;  
+  border-radius: 50%;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  text-decoration: none;  
+}  
+</style>  
+</head>  
+  
+<body>  
+  
+<header>  
+<img src="logo.png" class="logo">  
+<h1>Delicious Burger Düsseldorf</h1>  
+<p>Halal • Frisch • Kinderfreundlich</p>  
+</header>  
+  
+<div class="section">  
+<h2>Einblick</h2>  
+  
+<div class="slider">  
+  
+<div class="arrow left" onclick="prevSlide()">❮</div>  
+<div class="arrow right" onclick="nextSlide()">❯</div>  
+  
+<div class="slide active">  
+<video autoplay muted loop playsinline>  
+<source src="video.mp4" type="video/mp4">  
+</video>  
+</div>  
+  
+<div class="slide"><img src="innen1.jpg"></div>  
+<div class="slide"><img src="innen2.jpg"></div>  
+<div class="slide"><img src="innen4.jpg"></div>  
+<div class="slide"><img src="innen5.jpg"></div>  
+  
+</div>  
+</div>  
+  
+<div class="section">  
+<h2>Speisekarte</h2>  
 
-/* RATING */
-.rating {
-  background:#111;
-  padding:15px;
-  border-radius:15px;
-  text-align:center;
-  margin-top:20px;
-}
+<!-- DEINE KARTE BLEIBT UNVERÄNDERT -->
+... (bleibt alles wie bei dir)
 
-.rating a {color:gold;text-decoration:none;}
-</style>
-</head>
+<div class="rating">  
+⭐️⭐️⭐️⭐️⭐️ <br>  
+<b>4.9 / 5.0 Google Bewertungen</b><br>  
+<a href="https://share.google/ye7HfjlceywG6HtYB" target="_blank">👉 Bewertungen ansehen</a>  
+</div>  
+  
+</div>  
 
-<body>
-
-<!-- NAVIGATION -->
-<div class="nav">
-<a href="#home">Home</a>
-<a href="#menu">Speisekarte</a>
-<a href="#social">Social</a>
-<a href="#kontakt">Kontakt</a>
-<a href="#impressum">Impressum</a>
-</div>
-
-<!-- HOME -->
-<header id="home">
-<img src="logo.png" class="logo">
-<h1>Delicious Burger Düsseldorf</h1>
-<p>Halal • Frisch • Kinderfreundlich</p>
-</header>
-
-<!-- SLIDER -->
+<!-- 🔥 NEU: SOCIAL MEDIA -->
 <div class="section">
-<h2>Einblick</h2>
-
-<div class="slider">
-
-<div class="slide active">
-<video autoplay muted loop playsinline>
-<source src="video.mp4">
-</video>
-</div>
-
-<div class="slide"><img src="innen1.jpg"></div>
-<div class="slide"><img src="innen2.jpg"></div>
-<div class="slide"><img src="innen4.jpg"></div>
-<div class="slide"><img src="innen5.jpg"></div>
-
-</div>
-</div>
-
-<!-- MENU -->
-<div class="section" id="menu">
-<h2>Speisekarte</h2>
-
-<div class="menu-header">
-<span></span>
-<span>Single</span>
-<span>Menü</span>
-</div>
-
-<!-- DEINE KOMPLETTE KARTE BLEIBT -->
-
-<div class="category">Wraps</div>
-<div class="menu-item"><span>Chicken Wrap</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Crispy Wrap</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Beef Wrap</span><span>9,90€</span><span>14,90€</span></div>
-
-<div class="category">Beef Burger</div>
-<div class="menu-item"><span>Classic Burger</span><span>7,90€</span><span>12,90€</span></div>
-<div class="menu-item"><span>Cheese Burger</span><span>9,90€</span><span>13,90€</span></div>
-
-<!-- ⭐ Bewertung -->
-<div class="rating">
-⭐️⭐️⭐️⭐️⭐️ <br>
-<b>4.9 / 5.0 Google Bewertungen</b><br>
-<a href="https://share.google/ye7HfjlceywG6HtYB" target="_blank">
-👉 Bewertungen ansehen
-</a>
-</div>
-
-</div>
-
-<!-- SOCIAL -->
-<div class="section" id="social">
 <h2>Social Media</h2>
 
-<p>
-<a href="https://www.instagram.com/deliciousburgerandwraps" target="_blank">Instagram</a><br>
-<a href="https://www.tiktok.com/@deliciousburgerandwraps" target="_blank">TikTok</a>
-</p>
+<div class="social-buttons">
+
+<a href="https://www.instagram.com/deliciousburgerandwraps" target="_blank" class="instagram">
+📸 Instagram besuchen
+</a>
+
+<a href="https://www.tiktok.com/@deliciousburgerandwraps" target="_blank" class="tiktok">
+🎵 TikTok ansehen
+</a>
 
 </div>
-
-<!-- KONTAKT -->
-<div class="section" id="kontakt">
-<h2>Kontakt</h2>
-
-<p>
-📍 Ronsdorfer Straße 120, Düsseldorf<br>
-📞 0211 36180900
-</p>
-
-<iframe src="https://www.google.com/maps?q=Ronsdorfer+Straße+120+Düsseldorf&output=embed"
-width="100%" height="250" style="border:0;border-radius:15px;"></iframe>
-
 </div>
+  
+<div class="section">  
+<h2>Standort</h2>  
+<iframe src="https://www.google.com/maps?q=Düsseldorf&output=embed"  
+width="100%" height="250" style="border:0;border-radius:15px;"></iframe>  
+</div>  
+  
+<div class="section">  
+<h2>Impressum</h2>  
+... (bleibt gleich)  
+</div>  
+  
+<a href="tel:+4921136180900" class="call-btn">📞</a>  
+  
+<script>  
+let slides = document.querySelectorAll(".slide");  
+let index = 0;  
 
-<!-- IMPRESSUM -->
-<div class="section" id="impressum">
-<h2>Impressum</h2>
+function showSlide(i){
+slides.forEach(s => s.classList.remove("active"));
+slides[i].classList.add("active");
+}
 
-<p>
-Delicious Burger Düsseldorf<br>
-Inhaber: Youssef Baye<br>
-Ronsdorfer Straße 120<br>
-40233 Düsseldorf<br>
-Deutschland<br><br>
+function nextSlide(){
+index = (index + 1) % slides.length;
+showSlide(index);
+}
 
-Telefon: 0211 36180900<br>
-E-Mail: info@deliciousburger-nrw.de
-</p>
+function prevSlide(){
+index = (index - 1 + slides.length) % slides.length;
+showSlide(index);
+}
 
-</div>
-
-<a href="tel:+4921136180900" class="call-btn">📞</a>
-
-<script>
-let slides=document.querySelectorAll(".slide");
-let index=0;
-
-setInterval(()=>{
-slides[index].classList.remove("active");
-index=(index+1)%slides.length;
-slides[index].classList.add("active");
-},3000);
-</script>
-
-</body>
+setInterval(nextSlide, 4000);
+</script>  
+  
+</body>  
 </html>
