@@ -1,268 +1,87 @@
-<!DOCTYPE html>  
-<html lang="de">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  
-<title>Delicious Burger Düsseldorf – Halal Burger & Wraps</title>  
-<meta name="description" content="Halal Burger, Wraps & mehr in Düsseldorf. Frisch, lecker und kinderfreundlich. Jetzt anrufen!">  
-  
-<meta name="keywords" content="Burger Düsseldorf, Halal Burger Düsseldorf, Wraps Düsseldorf, Essen Düsseldorf, Delicious Burger NRW">  
-  
-<script type="application/ld+json">  
-{  
-  "@context": "https://schema.org",  
-  "@type": "Restaurant",  
-  "name": "Delicious Burger Düsseldorf",  
-  "image": "https://deliciousburger-nrw.de/logo.png",  
-  "address": {  
-    "@type": "PostalAddress",  
-    "streetAddress": "Ronsdorfer Straße 120",  
-    "addressLocality": "Düsseldorf",  
-    "postalCode": "40233",  
-    "addressCountry": "DE"  
-  },  
-  "telephone": "+4921136180900",  
-  "servesCuisine": "Burger, Halal",  
-  "priceRange": "€",  
-  "url": "https://deliciousburger-nrw.de"  
-}  
-</script>  
-  
-<style>  
-body {  
-  margin: 0;  
-  font-family: Arial;  
-  background: #000;  
-  color: white;  
-  padding-bottom: 100px;  
-}  
-  
-header {  
-  text-align: center;  
-  padding: 20px;  
-}  
-  
-.logo {  
-  width: 110px;  
-}  
-  
-h1, h2 {  
-  color: gold;  
-}  
-  
-.section {  
-  padding: 20px;  
-}  
-  
-.slider {  
-  position: relative;  
-  height: 250px;  
-  overflow: hidden;  
-  border-radius: 20px;  
-}  
-  
-.slide {  
-  position: absolute;  
-  width: 100%;  
-  height: 100%;  
-  opacity: 0;  
-  transition: 1s;  
-}  
-  
-.slide.active {  
-  opacity: 1;  
-}  
-  
-.slide img, .slide video {  
-  width: 100%;  
-  height: 100%;  
-  object-fit: cover;  
-}  
-  
-.arrow {  
-  position: absolute;  
-  top: 50%;  
-  transform: translateY(-50%);  
-  font-size: 30px;  
-  background: rgba(0,0,0,0.5);  
-  color: white;  
-  padding: 10px;  
-  cursor: pointer;  
-  z-index: 2;  
-}  
-  
-.arrow.left { left: 10px; }  
-.arrow.right { right: 10px; }  
-  
-.menu-header {  
-  display: grid;  
-  grid-template-columns: 1fr 80px 80px;  
-  border-bottom: 2px solid gold;  
-  padding: 10px 0;  
-  font-weight: bold;  
-}  
-  
-.menu-item {  
-  display: grid;  
-  grid-template-columns: 1fr 80px 80px;  
-  padding: 10px 0;  
-  border-bottom: 1px solid #333;  
-}  
-  
-.category {  
-  margin-top: 25px;  
-  font-size: 20px;  
-  color: gold;  
-}  
-  
-.rating {  
-  background: #111;  
-  padding: 15px;  
-  border-radius: 15px;  
-  margin-top: 20px;  
-  text-align: center;  
-}  
-  
-.rating a {  
-  color: gold;  
-  text-decoration: none;  
-}  
+<div class="section" id="menu">
+<h2>Speisekarte</h2>
 
-/* 🔥 NEU: SOCIAL BUTTONS */
-.social-buttons a {
-  display:block;
-  margin:10px 0;
-  padding:12px;
-  border-radius:10px;
-  text-align:center;
-  text-decoration:none;
-  font-weight:bold;
-}
+<div class="menu-header">
+<span></span>
+<span>Single</span>
+<span>Menü</span>
+</div>
 
-.instagram {
-  background:#E1306C;
-  color:white;
-}
+<!-- WRAPS -->
+<div class="category">Chicken Wraps</div>
+<div class="menu-item"><span>Delicious Chicken Wrap</span><span>7,90€</span><span>12,90€</span></div>
+<div class="menu-item"><span>Chilli Chicken Wrap</span><span>8,90€</span><span>13,90€</span></div>
+<div class="menu-item"><span>Crispy Chicken Wrap</span><span>8,90€</span><span>13,90€</span></div>
+<div class="menu-item"><span>Spezial Chicken Wrap</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>BBQ Chicken Wrap</span><span>8,90€</span><span>13,90€</span></div>
 
-.tiktok {
-  background:#25F4EE;
-  color:black;
-}
-  
-.call-btn {  
-  position: fixed;  
-  bottom: 20px;  
-  right: 20px;  
-  background: gold;  
-  color: black;  
-  font-size: 26px;  
-  width: 65px;  
-  height: 65px;  
-  border-radius: 50%;  
-  display: flex;  
-  align-items: center;  
-  justify-content: center;  
-  text-decoration: none;  
-}  
-</style>  
-</head>  
-  
-<body>  
-  
-<header>  
-<img src="logo.png" class="logo">  
-<h1>Delicious Burger Düsseldorf</h1>  
-<p>Halal • Frisch • Kinderfreundlich</p>  
-</header>  
-  
-<div class="section">  
-<h2>Einblick</h2>  
-  
-<div class="slider">  
-  
-<div class="arrow left" onclick="prevSlide()">❮</div>  
-<div class="arrow right" onclick="nextSlide()">❯</div>  
-  
-<div class="slide active">  
-<video autoplay muted loop playsinline>  
-<source src="video.mp4" type="video/mp4">  
-</video>  
-</div>  
-  
-<div class="slide"><img src="innen1.jpg"></div>  
-<div class="slide"><img src="innen2.jpg"></div>  
-<div class="slide"><img src="innen4.jpg"></div>  
-<div class="slide"><img src="innen5.jpg"></div>  
-  
-</div>  
-</div>  
-  
-<div class="section">  
-<h2>Speisekarte</h2>  
+<div class="category">Beef Wraps</div>
+<div class="menu-item"><span>Classic Wrap</span><span>6,90€</span><span>11,90€</span></div>
+<div class="menu-item"><span>Chilli Cheese Wrap</span><span>7,90€</span><span>12,90€</span></div>
+<div class="menu-item"><span>Beef Spezial Wrap</span><span>9,90€</span><span>14,90€</span></div>
 
-<!-- DEINE KARTE BLEIBT UNVERÄNDERT -->
-... (bleibt alles wie bei dir)
+<!-- BURGER -->
+<div class="category">Beef Burger</div>
+<div class="menu-item"><span>Classic Burger</span><span>7,90€</span><span>12,90€</span></div>
+<div class="menu-item"><span>Cheese Burger</span><span>8,90€</span><span>13,90€</span></div>
+<div class="menu-item"><span>BBQ Burger</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>Chilli Cheese Burger</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>Italian Burger</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>Smash Burger</span><span>11,90€</span><span>16,90€</span></div>
+<div class="menu-item"><span>Egg Burger</span><span>10,90€</span><span>15,90€</span></div>
 
-<div class="rating">  
-⭐️⭐️⭐️⭐️⭐️ <br>  
-<b>4.9 / 5.0 Google Bewertungen</b><br>  
-<a href="https://share.google/ye7HfjlceywG6HtYB" target="_blank">👉 Bewertungen ansehen</a>  
-</div>  
-  
-</div>  
+<div class="category">Chicken Burger</div>
+<div class="menu-item"><span>Chicken Classic</span><span>9,90€</span><span>13,90€</span></div>
+<div class="menu-item"><span>Chicken Cheese</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>BBQ Chicken</span><span>10,50€</span><span>15,50€</span></div>
+<div class="menu-item"><span>Chilli Chicken</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>Italian Chicken</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>Crispy Chicken</span><span>9,90€</span><span>14,90€</span></div>
 
-<!-- 🔥 NEU: SOCIAL MEDIA -->
-<div class="section">
-<h2>Social Media</h2>
+<!-- TACOS -->
+<div class="category">French Tacos</div>
+<div class="menu-item"><span>Beef Taco</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>Chicken Taco</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>Crispy Taco</span><span>9,90€</span><span>14,90€</span></div>
 
-<div class="social-buttons">
+<!-- BOWLS -->
+<div class="category">Bowls</div>
+<div class="menu-item"><span>Chicken Bowl</span><span>12,90€</span><span>-</span></div>
+<div class="menu-item"><span>Beef Bowl</span><span>12,90€</span><span>-</span></div>
+<div class="menu-item"><span>Crispy Bowl</span><span>12,90€</span><span>-</span></div>
 
-<a href="https://www.instagram.com/deliciousburgerandwraps" target="_blank" class="instagram">
-📸 Instagram besuchen
-</a>
+<!-- SALAT -->
+<div class="category">Salat</div>
+<div class="menu-item"><span>Salat</span><span>5,90€</span><span>10,90€</span></div>
+<div class="menu-item"><span>Chicken Salat</span><span>9,90€</span><span>-</span></div>
 
-<a href="https://www.tiktok.com/@deliciousburgerandwraps" target="_blank" class="tiktok">
-🎵 TikTok ansehen
-</a>
+<!-- SNACKS -->
+<div class="category">Snacks</div>
+<div class="menu-item"><span>Pommes</span><span>4,00€</span><span>-</span></div>
+<div class="menu-item"><span>Sweet Fries</span><span>5,00€</span><span>-</span></div>
+<div class="menu-item"><span>Chicken Tenders (4)</span><span>7,50€</span><span>12,50€</span></div>
+<div class="menu-item"><span>Chicken Nuggets (6)</span><span>6,90€</span><span>11,90€</span></div>
+
+<!-- DRINKS -->
+<div class="category">Cold Drinks</div>
+<div class="menu-item"><span>Coca Cola / Fanta / Sprite</span><span>2,70€</span><span>-</span></div>
+<div class="menu-item"><span>Ice Tea</span><span>2,70€</span><span>-</span></div>
+<div class="menu-item"><span>Red Bull</span><span>3,00€</span><span>-</span></div>
+
+<div class="category">Hot Drinks</div>
+<div class="menu-item"><span>Espresso</span><span>2,00€</span><span>-</span></div>
+<div class="menu-item"><span>Cappuccino</span><span>3,00€</span><span>-</span></div>
+<div class="menu-item"><span>Latte Macchiato</span><span>3,90€</span><span>-</span></div>
+
+<!-- SAUCEN -->
+<div class="category">Soßen</div>
+<div class="menu-item"><span>Alle Soßen</span><span>0,65€</span><span>-</span></div>
+
+<!-- BEWERTUNG -->
+<div class="rating">
+⭐️⭐️⭐️⭐️⭐️ <br>
+<b>4.9 / 5.0 Google Bewertungen</b><br>
+<a href="https://share.google/ye7HfjlceywG6HtYB" target="_blank">👉 Bewertungen ansehen</a>
+</div>
 
 </div>
-</div>
-  
-<div class="section">  
-<h2>Standort</h2>  
-<iframe src="https://www.google.com/maps?q=Düsseldorf&output=embed"  
-width="100%" height="250" style="border:0;border-radius:15px;"></iframe>  
-</div>  
-  
-<div class="section">  
-<h2>Impressum</h2>  
-... (bleibt gleich)  
-</div>  
-  
-<a href="tel:+4921136180900" class="call-btn">📞</a>  
-  
-<script>  
-let slides = document.querySelectorAll(".slide");  
-let index = 0;  
-
-function showSlide(i){
-slides.forEach(s => s.classList.remove("active"));
-slides[i].classList.add("active");
-}
-
-function nextSlide(){
-index = (index + 1) % slides.length;
-showSlide(index);
-}
-
-function prevSlide(){
-index = (index - 1 + slides.length) % slides.length;
-showSlide(index);
-}
-
-setInterval(nextSlide, 4000);
-</script>  
-  
-</body>  
-</html>
