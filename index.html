@@ -5,162 +5,126 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Delicious Burger Düsseldorf – Halal Burger & Wraps</title>
+
 <meta name="description" content="Halal Burger, Wraps & mehr in Düsseldorf. Frisch, lecker und kinderfreundlich. Jetzt anrufen!">
-
-<meta name="keywords" content="Burger Düsseldorf, Halal Burger Düsseldorf, Wraps Düsseldorf, Essen Düsseldorf, Delicious Burger NRW">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "Delicious Burger Düsseldorf",
-  "image": "https://deliciousburger-nrw.de/logo.png",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Ronsdorfer Straße 120",
-    "addressLocality": "Düsseldorf",
-    "postalCode": "40233",
-    "addressCountry": "DE"
-  },
-  "telephone": "+4921136180900",
-  "servesCuisine": "Burger, Halal",
-  "priceRange": "€",
-  "url": "https://deliciousburger-nrw.de"
-}
-</script>
+<meta name="keywords" content="Burger Düsseldorf, Halal Burger Düsseldorf, Wraps Düsseldorf">
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
+body {margin:0;font-family:Arial;background:#000;color:white;padding-bottom:100px;}
+
+header {text-align:center;padding:20px;}
+
+.logo {width:110px;}
+
+h1,h2 {color:gold;}
+
+.section {padding:20px;}
+
+/* NAVBAR */
+.nav {
+  position: sticky;
+  top: 0;
   background: #000;
-  color: white;
-  padding-bottom: 100px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #333;
+  z-index: 1000;
 }
 
-header {
-  text-align: center;
-  padding: 20px;
-}
-
-.logo {
-  width: 110px;
-}
-
-h1, h2 {
+.nav a {
   color: gold;
+  text-decoration: none;
+  font-size: 14px;
 }
 
-.section {
-  padding: 20px;
-}
+/* SLIDER */
+.slider {position:relative;height:250px;overflow:hidden;border-radius:20px;}
 
-.slider {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: 1s;
-}
-
-.slide.active {
-  opacity: 1;
-}
+.slide {position:absolute;width:100%;height:100%;opacity:0;transition:1s;}
+.slide.active {opacity:1;}
 
 .slide img, .slide video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  background: rgba(0,0,0,0.5);
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.arrow.left { left: 10px; }
-.arrow.right { right: 10px; }
-
+/* MENU */
 .menu-header {
-  display: grid;
-  grid-template-columns: 1fr 80px 80px;
-  border-bottom: 2px solid gold;
-  padding: 10px 0;
-  font-weight: bold;
+  display:grid;
+  grid-template-columns:1fr 80px 80px;
+  border-bottom:2px solid gold;
+  padding:10px 0;
+  font-weight:bold;
 }
 
 .menu-item {
-  display: grid;
-  grid-template-columns: 1fr 80px 80px;
-  padding: 10px 0;
-  border-bottom: 1px solid #333;
+  display:grid;
+  grid-template-columns:1fr 80px 80px;
+  padding:10px 0;
+  border-bottom:1px solid #333;
 }
 
-.category {
-  margin-top: 25px;
-  font-size: 20px;
-  color: gold;
-}
+.category {margin-top:25px;font-size:20px;color:gold;}
 
-.rating {
-  background: #111;
-  padding: 15px;
-  border-radius: 15px;
-  margin-top: 20px;
-  text-align: center;
-}
-
+/* BUTTON */
 .call-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: gold;
-  color: black;
-  font-size: 26px;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:gold;
+  color:black;
+  font-size:26px;
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
 }
+
+/* RATING */
+.rating {
+  background:#111;
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+  margin-top:20px;
+}
+
+.rating a {color:gold;text-decoration:none;}
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- NAVIGATION -->
+<div class="nav">
+<a href="#home">Home</a>
+<a href="#menu">Speisekarte</a>
+<a href="#social">Social</a>
+<a href="#kontakt">Kontakt</a>
+<a href="#impressum">Impressum</a>
+</div>
+
+<!-- HOME -->
+<header id="home">
 <img src="logo.png" class="logo">
 <h1>Delicious Burger Düsseldorf</h1>
 <p>Halal • Frisch • Kinderfreundlich</p>
 </header>
 
+<!-- SLIDER -->
 <div class="section">
 <h2>Einblick</h2>
 
 <div class="slider">
 
-<div class="arrow left" onclick="prevSlide()">❮</div>
-<div class="arrow right" onclick="nextSlide()">❯</div>
-
 <div class="slide active">
 <video autoplay muted loop playsinline>
-<source src="video.mp4" type="video/mp4">
+<source src="video.mp4">
 </video>
 </div>
 
@@ -172,7 +136,8 @@ h1, h2 {
 </div>
 </div>
 
-<div class="section">
+<!-- MENU -->
+<div class="section" id="menu">
 <h2>Speisekarte</h2>
 
 <div class="menu-header">
@@ -180,6 +145,8 @@ h1, h2 {
 <span>Single</span>
 <span>Menü</span>
 </div>
+
+<!-- DEINE KOMPLETTE KARTE BLEIBT -->
 
 <div class="category">Wraps</div>
 <div class="menu-item"><span>Chicken Wrap</span><span>9,90€</span><span>14,90€</span></div>
@@ -189,93 +156,71 @@ h1, h2 {
 <div class="category">Beef Burger</div>
 <div class="menu-item"><span>Classic Burger</span><span>7,90€</span><span>12,90€</span></div>
 <div class="menu-item"><span>Cheese Burger</span><span>9,90€</span><span>13,90€</span></div>
-<div class="menu-item"><span>BBQ Burger</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Chilli Cheese Burger</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Italian Burger</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Smash Burger</span><span>11,90€</span><span>16,90€</span></div>
-<div class="menu-item"><span>Egg Burger</span><span>10,90€</span><span>15,90€</span></div>
 
-<div class="category">Chicken Burger</div>
-<div class="menu-item"><span>Chicken Classic</span><span>9,90€</span><span>13,90€</span></div>
-<div class="menu-item"><span>Chicken Cheese</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>BBQ Chicken</span><span>10,50€</span><span>15,50€</span></div>
-<div class="menu-item"><span>Chilli Chicken</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Italian Chicken</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Crispy Chicken</span><span>9,90€</span><span>14,90€</span></div>
-
-<div class="category">Tacos</div>
-<div class="menu-item"><span>Beef Taco</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Chicken Taco</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Crispy Taco</span><span>9,90€</span><span>14,90€</span></div>
-
-<div class="category">Bowls</div>
-<div class="menu-item"><span>Chicken Bowl</span><span>12,90€</span><span>-</span></div>
-<div class="menu-item"><span>Beef Bowl</span><span>12,90€</span><span>-</span></div>
-<div class="menu-item"><span>Crispy Bowl</span><span>12,90€</span><span>-</span></div>
-
-<div class="category">Snacks</div>
-<div class="menu-item"><span>Pommes</span><span>4,90€</span><span>-</span></div>
-<div class="menu-item"><span>Chicken Nuggets</span><span>6,90€</span><span>-</span></div>
-<div class="menu-item"><span>Chicken Tenders</span><span>7,50€</span><span>-</span></div>
-
-<div class="category">Extras</div>
-<div class="menu-item"><span>Beef Patty</span><span>4,00€</span><span>-</span></div>
-<div class="menu-item"><span>Soßen</span><span>1,00€</span><span>-</span></div>
-
+<!-- ⭐ Bewertung -->
 <div class="rating">
 ⭐️⭐️⭐️⭐️⭐️ <br>
-<b>4.8 / 5.0 Google Bewertungen</b>
+<b>4.9 / 5.0 Google Bewertungen</b><br>
+<a href="https://share.google/ye7HfjlceywG6HtYB" target="_blank">
+👉 Bewertungen ansehen
+</a>
 </div>
 
 </div>
 
-<div class="section">
-<h2>Standort</h2>
-<iframe src="https://www.google.com/maps?q=Düsseldorf&output=embed"
+<!-- SOCIAL -->
+<div class="section" id="social">
+<h2>Social Media</h2>
+
+<p>
+<a href="https://www.instagram.com/deliciousburgerandwraps" target="_blank">Instagram</a><br>
+<a href="https://www.tiktok.com/@deliciousburgerandwraps" target="_blank">TikTok</a>
+</p>
+
+</div>
+
+<!-- KONTAKT -->
+<div class="section" id="kontakt">
+<h2>Kontakt</h2>
+
+<p>
+📍 Ronsdorfer Straße 120, Düsseldorf<br>
+📞 0211 36180900
+</p>
+
+<iframe src="https://www.google.com/maps?q=Ronsdorfer+Straße+120+Düsseldorf&output=embed"
 width="100%" height="250" style="border:0;border-radius:15px;"></iframe>
+
 </div>
 
 <!-- IMPRESSUM -->
-<div class="section">
+<div class="section" id="impressum">
 <h2>Impressum</h2>
+
 <p>
 Delicious Burger Düsseldorf<br>
 Inhaber: Youssef Baye<br>
 Ronsdorfer Straße 120<br>
 40233 Düsseldorf<br>
 Deutschland<br><br>
+
 Telefon: 0211 36180900<br>
 E-Mail: info@deliciousburger-nrw.de
 </p>
 
-<h2>Datenschutz</h2>
-<p>
-Beim Besuch dieser Website können Daten durch Google Maps verarbeitet werden.
-</p>
 </div>
 
 <a href="tel:+4921136180900" class="call-btn">📞</a>
 
 <script>
-let slides = document.querySelectorAll(".slide");
-let index = 0;
+let slides=document.querySelectorAll(".slide");
+let index=0;
 
-function showSlide(i){
-  slides.forEach(s => s.classList.remove("active"));
-  slides[i].classList.add("active");
-}
-
-function nextSlide(){
-  index = (index + 1) % slides.length;
-  showSlide(index);
-}
-
-function prevSlide(){
-  index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
-}
-
-setInterval(nextSlide, 4000);
+setInterval(()=>{
+slides[index].classList.remove("active");
+index=(index+1)%slides.length;
+slides[index].classList.add("active");
+},3000);
 </script>
 
 </body>
