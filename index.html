@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delicious Burger Düsseldorf</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #000;
+    color: #fff;
+    padding-bottom: 100px;
+}
+
+header {
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header img {
+    width: 110px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: gold;
+    font-size: 26px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+nav button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    background: #111;
+    color: white;
+}
+
+nav button.active {
+    background: gold;
+    color: black;
+}
+
+.section {
+    padding: 20px;
+}
+
+h2 {
+    color: gold;
+    margin-top: 25px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+}
+
+.price {
+    color: #ccc;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+a {
+    color: gold;
+    text-decoration: none;
+}
+
+.call-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: gold;
+    color: black;
+    border-radius: 50%;
+    padding: 18px;
+    font-size: 20px;
+    box-shadow: 0 0 10px gold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="./logo.png" alt="Logo">
+<h1>Delicious Burger Düsseldorf</h1>
+<p>Halal Burger • Wraps • Frisch • Kinderfreundlich</p>
+</header>
+
+<nav>
+<button onclick="show('home')" class="active">Home</button>
+<button onclick="show('menu')">Speisekarte</button>
+<button onclick="show('social')">Social</button>
+<button onclick="show('info')">Info</button>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section">
+<h2>Warum wir?</h2>
+<p>⭐ 4.9 Google Bewertung • 🥩 Halal • 🔥 Frisch • 👨‍👩‍👧‍👦 Kinderfreundlich • 🎮 Spielecke</p>
+
+<h2>Einblick</h2>
+<div class="gallery">
+<img src="./innen1.jpg">
+<img src="./innen2.jpg">
+<img src="./innen4.jpg">
+<img src="./innen5.jpg">
+</div>
+</div>
+
+<!-- MENU -->
+<div id="menu" class="section" style="display:none;">
+
+<h2>Chicken Wraps</h2>
+<div class="item"><span>Chicken Wrap</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Chilli Chicken Wrap</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Crispy Chicken Wrap</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Spezial Chicken Wrap</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>BBQ Chicken Wrap</span><span class="price">9,90€ | 14,90€</span></div>
+
+<h2>Beef Wraps</h2>
+<div class="item"><span>Classic Wrap</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Chilli Cheese Wrap</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Beef Spezial Wrap</span><span class="price">9,90€ | 14,90€</span></div>
+
+<h2>Beef Burger</h2>
+<div class="item"><span>Classic Burger</span><span class="price">7,90€ | 12,90€</span></div>
+<div class="item"><span>Cheese Burger</span><span class="price">9,90€ | 13,90€</span></div>
+<div class="item"><span>BBQ Burger</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Chilli Cheese Burger</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Italian Burger</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Smash Burger</span><span class="price">11,90€ | 16,90€</span></div>
+<div class="item"><span>Egg Burger</span><span class="price">10,90€ | 15,90€</span></div>
+
+<h2>Chicken Burger</h2>
+<div class="item"><span>Chicken Classic</span><span class="price">9,90€ | 13,90€</span></div>
+<div class="item"><span>Chicken Cheese</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>BBQ Chicken</span><span class="price">10,50€ | 15,50€</span></div>
+<div class="item"><span>Chilli Chicken</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Italian Chicken</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Crispy Chicken</span><span class="price">9,90€ | 14,90€</span></div>
+
+<h2>French Tacos</h2>
+<div class="item"><span>Beef Taco</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Chicken Taco</span><span class="price">9,90€ | 14,90€</span></div>
+<div class="item"><span>Crispy Taco</span><span class="price">9,90€ | 14,90€</span></div>
+
+<h2>Bowls</h2>
+<div class="item"><span>Chicken Bowl</span><span class="price">12,90€</span></div>
+<div class="item"><span>Beef Bowl</span><span class="price">12,90€</span></div>
+<div class="item"><span>Crispy Bowl</span><span class="price">12,90€</span></div>
+
+<h2>Snacks</h2>
+<div class="item"><span>Pommes</span><span class="price">4,90€</span></div>
+<div class="item"><span>Chicken Nuggets</span><span class="price">6,90€</span></div>
+<div class="item"><span>Chicken Tenders</span><span class="price">7,50€</span></div>
+
+<h2>Extras</h2>
+<div class="item"><span>Beef Patty</span><span class="price">4,00€</span></div>
+<div class="item"><span>Saucen</span><span class="price">1,00€</span></div>
+
+</div>
+
+<!-- SOCIAL -->
+<div id="social" class="section" style="display:none;">
+<h2>Folge uns</h2>
+<p><a href="https://www.instagram.com/deliciousburgerandwraps">Instagram</a></p>
+<p><a href="https://www.tiktok.com/@deliciousburgerandwraps">TikTok</a></p>
+</div>
+
+<!-- INFO -->
+<div id="info" class="section" style="display:none;">
+<h2>Kontakt</h2>
+<p>Ronsdorfer Str. 120, Düsseldorf</p>
+<p>📞 0211 36106900</p>
+
+<h2>Standort</h2>
+<iframe 
+src="https://www.google.com/maps?q=Ronsdorfer+Str.+120,+Düsseldorf&output=embed"
+width="100%" height="250" style="border:0;border-radius:15px;">
+</iframe>
+
+<h2>Google Bewertung</h2>
+<a href="https://share.google/N06ip5RK07K8EdiyZ" target="_blank" style="
+display:inline-block;
+background:gold;
+color:black;
+padding:10px 20px;
+border-radius:20px;
+font-weight:bold;
+margin-top:10px;">
+⭐ Jetzt bewerten (4.9)
+</a>
+
+<h2>Impressum</h2>
+<p>
+Youssef Baye<br>
+Delicious Burger Düsseldorf<br>
+Ronsdorfer Str. 120<br>
+40233 Düsseldorf
+</p>
+</div>
+
+<a href="tel:021136106900" class="call-btn">📞</a>
+
+<script>
+function show(section) {
+    document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+    document.getElementById(section).style.display = 'block';
+
+    document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
