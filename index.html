@@ -1,3 +1,42 @@
+<body>
+
+<!-- 🔥 NAVIGATION -->
+<div style="position:sticky;top:0;background:#000;padding:10px;display:flex;justify-content:space-around;z-index:1000;border-bottom:1px solid #333;">
+<a href="#home" style="color:gold;text-decoration:none;">Home</a>
+<a href="#menu" style="color:gold;text-decoration:none;">Speisekarte</a>
+<a href="#social" style="color:gold;text-decoration:none;">Social</a>
+<a href="#kontakt" style="color:gold;text-decoration:none;">Kontakt</a>
+<a href="#impressum" style="color:gold;text-decoration:none;">Impressum</a>
+</div>
+
+<header id="home">
+<img src="logo.png" class="logo">
+<h1>Delicious Burger Düsseldorf</h1>
+<p>Halal • Frisch • Kinderfreundlich</p>
+</header>
+
+<div class="section">
+<h2>Einblick</h2>
+
+<div class="slider">
+<div class="arrow left" onclick="prevSlide()">❮</div>
+<div class="arrow right" onclick="nextSlide()">❯</div>
+
+<div class="slide active">
+<video autoplay muted loop playsinline>
+<source src="video.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="slide"><img src="innen1.jpg"></div>
+<div class="slide"><img src="innen2.jpg"></div>
+<div class="slide"><img src="innen4.jpg"></div>
+<div class="slide"><img src="innen5.jpg"></div>
+
+</div>
+</div>
+
+<!-- 🔥 SPEISEKARTE KOMPLETT -->
 <div class="section" id="menu">
 <h2>Speisekarte</h2>
 
@@ -7,7 +46,6 @@
 <span>Menü</span>
 </div>
 
-<!-- WRAPS -->
 <div class="category">Chicken Wraps</div>
 <div class="menu-item"><span>Delicious Chicken Wrap</span><span>7,90€</span><span>12,90€</span></div>
 <div class="menu-item"><span>Chilli Chicken Wrap</span><span>8,90€</span><span>13,90€</span></div>
@@ -20,7 +58,6 @@
 <div class="menu-item"><span>Chilli Cheese Wrap</span><span>7,90€</span><span>12,90€</span></div>
 <div class="menu-item"><span>Beef Spezial Wrap</span><span>9,90€</span><span>14,90€</span></div>
 
-<!-- BURGER -->
 <div class="category">Beef Burger</div>
 <div class="menu-item"><span>Classic Burger</span><span>7,90€</span><span>12,90€</span></div>
 <div class="menu-item"><span>Cheese Burger</span><span>8,90€</span><span>13,90€</span></div>
@@ -38,31 +75,26 @@
 <div class="menu-item"><span>Italian Chicken</span><span>9,90€</span><span>14,90€</span></div>
 <div class="menu-item"><span>Crispy Chicken</span><span>9,90€</span><span>14,90€</span></div>
 
-<!-- TACOS -->
 <div class="category">French Tacos</div>
 <div class="menu-item"><span>Beef Taco</span><span>9,90€</span><span>14,90€</span></div>
 <div class="menu-item"><span>Chicken Taco</span><span>9,90€</span><span>14,90€</span></div>
 <div class="menu-item"><span>Crispy Taco</span><span>9,90€</span><span>14,90€</span></div>
 
-<!-- BOWLS -->
 <div class="category">Bowls</div>
 <div class="menu-item"><span>Chicken Bowl</span><span>12,90€</span><span>-</span></div>
 <div class="menu-item"><span>Beef Bowl</span><span>12,90€</span><span>-</span></div>
 <div class="menu-item"><span>Crispy Bowl</span><span>12,90€</span><span>-</span></div>
 
-<!-- SALAT -->
 <div class="category">Salat</div>
 <div class="menu-item"><span>Salat</span><span>5,90€</span><span>10,90€</span></div>
 <div class="menu-item"><span>Chicken Salat</span><span>9,90€</span><span>-</span></div>
 
-<!-- SNACKS -->
 <div class="category">Snacks</div>
 <div class="menu-item"><span>Pommes</span><span>4,00€</span><span>-</span></div>
 <div class="menu-item"><span>Sweet Fries</span><span>5,00€</span><span>-</span></div>
 <div class="menu-item"><span>Chicken Tenders (4)</span><span>7,50€</span><span>12,50€</span></div>
 <div class="menu-item"><span>Chicken Nuggets (6)</span><span>6,90€</span><span>11,90€</span></div>
 
-<!-- DRINKS -->
 <div class="category">Cold Drinks</div>
 <div class="menu-item"><span>Coca Cola / Fanta / Sprite</span><span>2,70€</span><span>-</span></div>
 <div class="menu-item"><span>Ice Tea</span><span>2,70€</span><span>-</span></div>
@@ -73,11 +105,9 @@
 <div class="menu-item"><span>Cappuccino</span><span>3,00€</span><span>-</span></div>
 <div class="menu-item"><span>Latte Macchiato</span><span>3,90€</span><span>-</span></div>
 
-<!-- SAUCEN -->
 <div class="category">Soßen</div>
 <div class="menu-item"><span>Alle Soßen</span><span>0,65€</span><span>-</span></div>
 
-<!-- BEWERTUNG -->
 <div class="rating">
 ⭐️⭐️⭐️⭐️⭐️ <br>
 <b>4.9 / 5.0 Google Bewertungen</b><br>
@@ -85,3 +115,41 @@
 </div>
 
 </div>
+
+<!-- SOCIAL -->
+<div class="section" id="social">
+<h2>Social Media</h2>
+
+<div class="social-buttons">
+<a href="https://www.instagram.com/deliciousburgerandwraps" target="_blank" class="instagram">📸 Instagram besuchen</a>
+<a href="https://www.tiktok.com/@deliciousburgerandwraps" target="_blank" class="tiktok">🎵 TikTok ansehen</a>
+</div>
+</div>
+
+<!-- KONTAKT -->
+<div class="section" id="kontakt">
+<h2>Standort</h2>
+<iframe src="https://www.google.com/maps?q=Düsseldorf&output=embed"
+width="100%" height="250" style="border:0;border-radius:15px;"></iframe>
+</div>
+
+<!-- IMPRESSUM -->
+<div class="section" id="impressum">
+<h2>Impressum</h2>
+<p>
+Delicious Burger Düsseldorf<br>
+Inhaber: Youssef Baye<br>
+Ronsdorfer Straße 120<br>
+40233 Düsseldorf<br>
+Deutschland<br><br>
+Telefon: 0211 36180900<br>
+E-Mail: info@deliciousburger-nrw.de
+</p>
+
+<h2>Datenschutz</h2>
+<p>Beim Besuch dieser Website können Daten durch Google Maps verarbeitet werden.</p>
+</div>
+
+<a href="tel:+4921136180900" class="call-btn">📞</a>
+
+</body>
