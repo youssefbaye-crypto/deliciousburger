@@ -44,6 +44,7 @@ z-index:1000;
 .nav a {
 color:gold;
 text-decoration:none;
+font-weight:bold;
 }
 
 .hero {
@@ -53,9 +54,6 @@ background-position:center;
 text-align:center;
 padding:60px 20px;
 }
-
-.hero h1 {font-size:28px;}
-.hero p {margin-top:10px;font-size:16px;}
 
 .cta {
 margin-top:20px;
@@ -115,24 +113,14 @@ font-weight:bold;
 .menu-item {
 display:grid;
 grid-template-columns:1fr 80px 80px;
-padding:12px;
-margin-bottom:8px;
-background:#111;
-border-radius:10px;
+padding:10px;
+border-bottom:1px solid #333;
 }
 
 .category {
 margin-top:25px;
 font-size:20px;
 color:gold;
-}
-
-.rating {
-background:#111;
-padding:15px;
-border-radius:15px;
-margin-top:20px;
-text-align:center;
 }
 
 .btn {
@@ -191,24 +179,13 @@ text-decoration:none;
 <header id="home">
 <img src="logo.png" class="logo">
 <h1>Delicious Burger Düsseldorf</h1>
-<p>🔥 Frisch gegrillte Halal Burger in Düsseldorf<br>⭐ 4.9 Google Bewertung</p>
+<p>🔥 Frisch gegrillte Halal Burger<br>⭐ 4.9 Google Bewertung</p>
 </header>
 
 <div class="hero">
 <h1>Die besten Halal Burger in Düsseldorf</h1>
-<p>Frisch. Saftig. Direkt vom Grill. Über 4.9⭐ bewertet</p>
+<p>Frisch. Saftig. Direkt vom Grill.</p>
 <a href="tel:+4921136180900" class="cta">📞 Jetzt anrufen</a>
-</div>
-
-<div class="section">
-<h2>Warum Delicious Burger?</h2>
-<p>
-✔ Halal Fleisch<br>
-✔ Frische Zutaten vom Bauern<br>
-✔ Burgerbrot vom Bäcker<br>
-✔ Kinderfreundlich & gemütlich<br>
-✔ Direkt an der U-Bahn
-</p>
 </div>
 
 <div class="section">
@@ -218,12 +195,7 @@ text-decoration:none;
 <div class="arrow left" onclick="prevSlide()">❮</div>
 <div class="arrow right" onclick="nextSlide()">❯</div>
 
-<div class="slide active">
-<video autoplay muted loop playsinline>
-<source src="video.mp4">
-</video>
-</div>
-
+<div class="slide active"><video autoplay muted loop><source src="video.mp4"></video></div>
 <div class="slide"><img src="innen1.jpg"></div>
 <div class="slide"><img src="innen2.jpg"></div>
 <div class="slide"><img src="innen4.jpg"></div>
@@ -231,55 +203,77 @@ text-decoration:none;
 </div>
 </div>
 
-<!-- ⭐ GOOGLE BUTTONS -->
+<!-- ⭐ GOOGLE -->
 <div class="section">
-<h2>Bewertungen & Standort</h2>
+<h2>Bewertungen</h2>
 
-<a href="https://www.google.com/maps?q=Ronsdorfer+Straße+120+Düsseldorf" target="_blank" class="btn btn-dark">
-📍 Auf Google Maps öffnen
-</a>
-
-<br>
-
-<!-- 🔴 HIER DEIN ECHTER GOOGLE BEWERTUNG LINK EINSETZEN -->
-<a href="HIER-DEIN-GOOGLE-BEWERTUNGSLINK" target="_blank" class="btn btn-gold">
+<a href="https://g.page/r/CVO4UQeyxg84EAE/review" target="_blank" class="btn btn-gold">
 ⭐ Jetzt bewerten
 </a>
 
 </div>
 
-<div class="section">
-<h2>Burger Restaurant in Düsseldorf</h2>
-<p>
-Du suchst die besten Burger in Düsseldorf? Bei Delicious Burger bekommst du Smash Burger, Wraps und mehr – frisch zubereitet. Perfekt für Familien und Freunde.
-</p>
+<!-- 🔥 KOMPLETTE SPEISEKARTE -->
+<div class="section" id="menu">
+<h2>Speisekarte</h2>
+
+<div class="menu-header">
+<span></span>
+<span>Single</span>
+<span>Menü</span>
+</div>
+
+<div class="category">Chicken Wraps</div>
+<div class="menu-item"><span>Delicious Chicken Wrap</span><span>7,90€</span><span>12,90€</span></div>
+<div class="menu-item"><span>Chilli Chicken Wrap</span><span>8,90€</span><span>13,90€</span></div>
+<div class="menu-item"><span>Crispy Chicken Wrap</span><span>8,90€</span><span>13,90€</span></div>
+<div class="menu-item"><span>Spezial Chicken Wrap</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>BBQ Chicken Wrap</span><span>8,90€</span><span>13,90€</span></div>
+
+<div class="category">Beef Wraps</div>
+<div class="menu-item"><span>Classic Wrap</span><span>6,90€</span><span>11,90€</span></div>
+<div class="menu-item"><span>Chilli Cheese Wrap</span><span>7,90€</span><span>12,90€</span></div>
+<div class="menu-item"><span>Beef Spezial Wrap</span><span>9,90€</span><span>14,90€</span></div>
+
+<div class="category">Beef Burger</div>
+<div class="menu-item"><span>Classic Burger</span><span>7,90€</span><span>12,90€</span></div>
+<div class="menu-item"><span>Cheese Burger</span><span>8,90€</span><span>13,90€</span></div>
+<div class="menu-item"><span>BBQ Burger</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>Chilli Cheese Burger</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>Italian Burger</span><span>9,90€</span><span>14,90€</span></div>
+<div class="menu-item"><span>Smash Burger</span><span>11,90€</span><span>16,90€</span></div>
+<div class="menu-item"><span>Egg Burger</span><span>10,90€</span><span>15,90€</span></div>
+
+<div class="category">Chicken Burger</div>
+<div class="menu-item"><span>Chicken Classic</span><span>9,90€</span><span>13,90€</span></div>
+<div class="menu-item"><span>Chicken Cheese</span><span>9,90€</span><span>14,90€</span></div>
+
+<div class="category">Snacks</div>
+<div class="menu-item"><span>Pommes</span><span>4,00€</span><span>-</span></div>
+<div class="menu-item"><span>Chicken Nuggets</span><span>6,90€</span><span>-</span></div>
+
 </div>
 
 <div class="section" id="social">
 <h2>Social Media</h2>
 <div class="social-buttons">
-<a href="https://www.instagram.com/deliciousburgerandwraps" target="_blank" class="instagram">📸 Instagram</a>
-<a href="https://www.tiktok.com/@deliciousburgerandwraps" target="_blank" class="tiktok">🎵 TikTok</a>
+<a href="https://www.instagram.com/deliciousburgerandwraps" target="_blank" class="instagram">Instagram</a>
+<a href="https://www.tiktok.com/@deliciousburgerandwraps" target="_blank" class="tiktok">TikTok</a>
 </div>
 </div>
 
 <div class="section" id="kontakt">
 <h2>Standort</h2>
 <iframe src="https://www.google.com/maps?q=Ronsdorfer+Straße+120+Düsseldorf&output=embed"
-width="100%" height="250" style="border:0;border-radius:15px;"></iframe>
+width="100%" height="250"></iframe>
 </div>
 
 <div class="section" id="impressum">
 <h2>Impressum</h2>
-<p>
-Delicious Burger Düsseldorf<br>
-Inhaber: Youssef Baye<br>
+<p>Delicious Burger Düsseldorf<br>
 Ronsdorfer Straße 120<br>
 40233 Düsseldorf<br>
-Deutschland<br><br>
-Telefon: 0211 36180900<br>
-E-Mail: delicious_burger@web.de
-</p>
+E-Mail: delicious_burger@web.de</p>
 </div>
 
 <a href="tel:+4921136180900" class="call-btn">📞</a>
