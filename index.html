@@ -133,6 +133,7 @@ font-weight:bold;
 }
 
 .btn-gold {background:gold;color:black;}
+.btn-dark {background:#111;color:gold;}
 
 .social-buttons a {
 display:block;
@@ -187,14 +188,16 @@ text-decoration:none;
 <a href="tel:+4921136180900" class="cta">📞 Jetzt anrufen</a>
 </div>
 
+<!-- 🔥 WARUM WIR -->
 <div class="section">
 <h2>Warum Delicious Burger?</h2>
 <p>
 ✔ 100% Halal Fleisch<br>
-✔ Frische Zutaten vom Bauern<br>
-✔ Burgerbrot frisch vom Bäcker<br>
-✔ Kinderfreundlich<br>
-✔ Direkt an der U-Bahn
+✔ Frische Zutaten direkt vom Bauern<br>
+✔ Burgerbrot täglich frisch vom Bäcker<br>
+✔ Saftige Patties frisch gegrillt<br>
+✔ Kinderfreundlich & gemütlich<br>
+✔ Top Lage in Düsseldorf<br>
 </p>
 </div>
 
@@ -213,14 +216,23 @@ text-decoration:none;
 </div>
 </div>
 
+<!-- ⭐ GOOGLE -->
 <div class="section">
 <h2>Bewertungen</h2>
+
 <a href="https://g.page/r/CVO4UQeyxg84EAE/review" target="_blank" class="btn btn-gold">
 ⭐ Jetzt bewerten
 </a>
+
+<br>
+
+<a href="https://www.google.com/maps?q=Ronsdorfer+Straße+120+Düsseldorf" target="_blank" class="btn btn-dark">
+📍 Auf Google Maps öffnen
+</a>
+
 </div>
 
-<!-- 🔥 KOMPLETTE KARTE -->
+<!-- 🔥 KOMPLETTE SPEISEKARTE -->
 <div class="section" id="menu">
 <h2>Speisekarte</h2>
 
@@ -247,16 +259,63 @@ text-decoration:none;
 <div class="category">Chicken Burger</div>
 <div class="menu-item"><span>Chicken Classic</span><span>9,90€</span><span>13,90€</span></div>
 <div class="menu-item"><span>Chicken Cheese</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>BBQ Chicken</span><span>10,50€</span><span>15,50€</span></div>
-<div class="menu-item"><span>Chilli Chicken</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Italian Chicken</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Crispy Chicken</span><span>9,90€</span><span>14,90€</span></div>
 
-<div class="category">French Tacos</div>
-<div class="menu-item"><span>Beef Taco</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Chicken Taco</span><span>9,90€</span><span>14,90€</span></div>
-<div class="menu-item"><span>Crispy Taco</span><span>9,90€</span><span>14,90€</span></div>
+<div class="category">Snacks</div>
+<div class="menu-item"><span>Pommes</span><span>4,90€</span><span>-</span></div>
+<div class="menu-item"><span>Chicken Nuggets</span><span>6,90€</span><span>-</span></div>
 
-<div class="category">Bowls</div>
-<div class="menu-item"><span>Chicken Bowl</span><span>12,90€</span><span>-</span></div>
-<div class
+<div class="category">Soßen</div>
+<div class="menu-item"><span>Alle Soßen</span><span>1,00€</span><span>-</span></div>
+
+</div>
+
+<!-- SOCIAL -->
+<div class="section" id="social">
+<h2>Social Media</h2>
+<div class="social-buttons">
+<a href="https://www.instagram.com/deliciousburgerandwraps" target="_blank" class="instagram">Instagram</a>
+<a href="https://www.tiktok.com/@deliciousburgerandwraps" target="_blank" class="tiktok">TikTok</a>
+</div>
+</div>
+
+<div class="section" id="kontakt">
+<h2>Standort</h2>
+<iframe src="https://www.google.com/maps?q=Ronsdorfer+Straße+120+Düsseldorf&output=embed"
+width="100%" height="250"></iframe>
+</div>
+
+<div class="section" id="impressum">
+<h2>Impressum</h2>
+<p>
+Delicious Burger Düsseldorf<br>
+Ronsdorfer Straße 120<br>
+40233 Düsseldorf<br>
+Deutschland<br><br>
+Telefon: 0211 36180900<br>
+E-Mail: delicious_burger@web.de
+</p>
+</div>
+
+<a href="tel:+4921136180900" class="call-btn">📞</a>
+
+<script>
+let slides=document.querySelectorAll(".slide");
+let index=0;
+
+function nextSlide(){
+slides[index].classList.remove("active");
+index=(index+1)%slides.length;
+slides[index].classList.add("active");
+}
+
+function prevSlide(){
+slides[index].classList.remove("active");
+index=(index-1+slides.length)%slides.length;
+slides[index].classList.add("active");
+}
+
+setInterval(nextSlide,4000);
+</script>
+
+</body>
+</html>
